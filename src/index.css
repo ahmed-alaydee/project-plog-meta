@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root,
+.light {
+  --body-bg: #ffffff;
+  --primary-color: #4b6bfb;
+  --primary-color-05: rgba(75, 107, 251, 0.05);
+  --primary-color-30: rgba(75, 107, 251, 0.3);
+  --text-color-01: #181a2a;
+  --color-01: #3b3c4a;
+  --color-02: #e8e8ea;
+  --color-03: #f4f4f5;
+  --color-04: var(--color-02);
+  --color-05: #f6f6f7;
+  --color-06: #696A75;
+  --color-07: #3B3C4A;
+  --color-08: var(--body-bg);
+  --color-09: #DCDDDF;
+  --color-10: #141624;
+  --color-11: var(--color-09);
+  --color-12: var(--color-07);
+  --color-13: var(--color-06);
+  --color-14: var(--color-05);
+  --color-15: var(--color-06);
+}
+
+.dark {
+  --body-bg: #181a2a;
+  --text-color-01: #ffffff;
+  --color-01: #ffffff;
+  --color-02: #4b6bfb;
+  --color-03: #242535;
+  --color-04: var(--color-03);
+  --color-05: #141624;
+  --color-06: #97989F;
+  --color-07: #bababf;
+  --color-08: var(--color-03);
+  --color-09: #3B3C4A;
+  --color-10: #ffffff;
+  --color-11: var(--color-03);
+  --color-12: #696A75;
+  --color-13: var(--color-09);
+  --color-14: var(--color-03);
+  --color-15: var(--color-07);
+}
+
+svg {
+  max-width: 70%;
+}
+
+.container {
+  @apply mx-auto w-4/5;
+}
+
+.open .menubarBtn span:nth-child(1) {
+  @apply translate-x-0 translate-y-[300%] rotate-45 !bg-red-700;
+}
+
+.open .menubarBtn span:nth-child(2) {
+  @apply !bg-transparent w-full;
+}
+
+.open .menubarBtn span:nth-child(3) {
+  @apply translate-x-0 -translate-y-[300%] -rotate-45 !w-full !bg-red-700;
+}
+
+.open .menubar {
+  @apply max-lg:top-0;
+}
+
+.nav-link {
+  @apply text-[var(--color-01)] text-base font-medium text-nowrap max-lg:inline-block max-lg:w-full max-lg:p-4 max-lg:rounded-full max-lg:bg-[var(--color-02)] max-lg:text-xl max-lg:font-bold lg:hover:text-[var(--primary-color)] transition-colors duration-200;
+}
+
+.pipeline-before {
+  @apply before:w-px before:h-4 before:bg-stone-200 relative before:absolute before:-left-1/4 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2;
+}
+
+.post-card {
+  @apply flex flex-col gap-4 p-4 border border-[var(--color-04)] rounded-xl transition-all duration-300 hover:scale-105;
+}
+
+.post-card > a > img {
+  @apply rounded-md select-none;
+  -webkit-user-drag: none;
+}
+
+.post-card .card-content {
+  @apply p-2 flex flex-col gap-5;
+}
+
+.post-card .card-content .heading {
+  @apply flex flex-col gap-4;
+}
+
+.post-card .card-content .heading .badge {
+  @apply text-[var(--primary-color)] bg-[var(--primary-color-05)] py-1 px-2 w-fit rounded-md text-sm font-medium;
+}
+
+.post-card .card-content .heading .title {
+  @apply text-2xl font-semibold text-primary transition-all duration-300 hover:text-[var(--primary-color)];
+}
+
+.post-card .card-content .info {
+  @apply flex max-lg:flex-col lg:gap-5 max-lg:gap-4 lg:items-center max-lg:items-start;
+}
+
+.post-card .card-content .info a {
+  @apply flex gap-3 items-center transition-all;
+}
+
+.post-card .card-content .info a img {
+  @apply w-9;
+}
+
+.post-card .card-content .info a h4 {
+  @apply text-base text-slate-400;
+}
+
+.post-card .card-content .info a:hover h4 {
+  @apply text-[var(--primary-color)];
+}
+
+.post-card .card-content .info .date {
+  @apply text-base text-slate-400;
+}
+
+.single-post-cont {
+  @apply md:w-2/3 mx-auto flex flex-col gap-8;
+}
+
+.single-post-cont .p {
+  @apply text-xl text-[var(--color-07)];
+}
+
+.single-post-cont h3 {
+  @apply text-2xl font-semibold text-primary mb-4;
+}
+
+.single-post-cont .quote {
+  @apply text-2xl italic text-primary bg-[var(--color-14)] rounded-xl p-8 border-l-4 border-stone-200 before:content-['\201C'] before:mr-2 after:content-['\201D'] after:ml-2;
+}
